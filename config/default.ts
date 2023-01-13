@@ -1,3 +1,4 @@
 export default {
-    dbUri: "mongodb://localhost:27017/learning-graphql-api"
-}
+    dbUri: "mongodb://localhost:27017/graphql-api-tutorial",
+  };
+  

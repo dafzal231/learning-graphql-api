@@ -2,11 +2,11 @@ import config from "config";
 import jwt from "jsonwebtoken";
 
 const publicKey = Buffer.from(
-  config.get<string>("PublicKey"),
+  config.get<string>("publicKey"),
   "base64"
 ).toString("ascii");
 const privateKey = Buffer.from(
-  config.get<string>("PrivateKey"),
+  config.get<string>("privateKey"),
   "base64"
 ).toString("ascii");
 

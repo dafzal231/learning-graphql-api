@@ -19,7 +19,7 @@ export default class UserResolver {
     // tldr uses user.service to create a user based on the input for the mutation
 
     // why is await not used?
-    @Mutation(returns => User)
+    @Mutation(() => User)
     createUser(@Arg('input') input: CreateUserInput){ 
         return this.userService.createUser(input)
     }
@@ -32,9 +32,9 @@ export default class UserResolver {
         return this.userService.login(input, context);
     }
 
-    @Query(type => User)
-    me(@Ctx() context: Context){
-        return context.user
+    @Query(() => User, { nullable: true })
+    me(@Ctx() context: Context) {
+        return context.user;
     }
     // random query that returns type User
     // me() returns the user object which is statically typed out
